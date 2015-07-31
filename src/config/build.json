@@ -1,0 +1,24 @@
+{
+  "css": {
+    "sample": {
+      "samplelessvariables":{
+        "libname": "samplelib",
+        "config":"dist/tmp/theme.less",
+        "srcfiles": [
+          "somefile.less"
+        ],
+        "destdir": "dist/css"
+      }
+    }
+  },
+  "js": {
+    "sample": {
+      "libname": "sample",
+      "srcfiles": [
+        "scripts/demo.js",
+        "scripts/pippo.js"
+      ],
+      "destdir": "dist/js"
+    }
+  }
+}
