@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patiernom/Gulper.git"
+    "url": "git+https://github.com/patiernom/Grulper.git"
   },
   "author": "Marco Patierno",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/patiernom/Gulper/issues"
+    "url": "https://github.com/patiernom/Grulper/issues"
   },
-  "homepage": "https://github.com/patiernom/Gulper#readme",
+  "homepage": "https://github.com/patiernom/Grulper#readme",
   "dependencies": {
     "defaults": "^1.0.2",
     "glob": "^5.0.14"
