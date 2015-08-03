@@ -4,12 +4,11 @@ var gulp     = require('gulp');
 var plugins  = require('gulp-load-plugins')();
 var settings = require('./gulp/loadSettings')('gulp/config.json');
 var helpers  = require('./gulp/helpers')(settings);
-var tasks    = require('./gulp/loadTasks');
+var tasks    = require('grulper-load-tasks');
+var options = {
+    dirname: settings.projectDirectory + settings.projectTasks
+};
 
-gulp = tasks(gulp, plugins, helpers, {
-    dirname: settings.projectTasks,   // The directory that tasks are located in
-    pattern: '*.js',    // Pattern to use when looking for task files
-    cwd: process.cwd() // Current working directory configuration
-});
+gulp = tasks(gulp, options, plugins, helpers);
 
 gulp.task('default', ['scripts']);

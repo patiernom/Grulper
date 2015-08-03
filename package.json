@@ -21,6 +21,7 @@
     "glob": "^5.0.14"
   },
   "devDependencies": {
+    "grulper-load-tasks": "^1.0.2",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^0.10.0",
