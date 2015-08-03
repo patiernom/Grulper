@@ -12,6 +12,6 @@ module.exports = function (settings) {
 
             return require(path.resolve(file));
         },
-        getProjectSetting: settings
+        projectSetting: settings
     }
 };

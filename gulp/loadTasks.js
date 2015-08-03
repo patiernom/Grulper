@@ -1,6 +1,8 @@
-var path     = require('path');
-var glob     = require('glob');
-var defaults = require('defaults');
+"use strict";
+
+var path     = require('path'),
+    glob     = require('glob'),
+    defaults = require('defaults');
 
 function isString(str) {
     return typeof str === 'string' || str instanceof String;
@@ -10,26 +12,34 @@ function isFunction(func) {
     return typeof func === 'function';
 }
 
+function defaultFunction(func) {
+    return isFunction(func) ? func : null;
+}
+
 module.exports = function(gulp, plugins, helpers, options){
     if (isString(options)) {
         options = { dirname: options };
     }
 
-    // Establish the defaults
     options = defaults(options, {
-        dirname: 'tasks',
+        dirname: helpers.projectSetting.projectTasks,
         cwd: process.cwd(),
         pattern: '*.js'
     });
 
-    var tasksPattern = path.join(helpers.getProjectSetting.projectDirectory,helpers.getProjectSetting.projectConfig,options.dirname, options.pattern);
-    var taskFiles    = glob.sync(tasksPattern, {cwd: options.cwd});
+    var tasksPattern = path.join (
+            helpers.projectSetting.projectDirectory,
+            options.dirname,
+            options.pattern
+        ),
+        taskFiles    = glob.sync(tasksPattern, { cwd: options.cwd });
 
     taskFiles.map(function (taskFile) {
-        var basename     = path.basename(taskFile, path.extname(taskFile));
-        var task         = require(path.join(options.cwd, taskFile));
-        var taskFunc     = isFunction(task) ? task(gulp, plugins, helpers) : null;
-        taskFunc = isFunction(taskFunc) ? taskFunc : null;
+        var basename     = path.basename(taskFile, path.extname(taskFile)),
+            task         = require(path.join(options.cwd, taskFile)),
+            taskFunc     = defaultFunction(task(gulp, plugins, helpers));
+
+        taskFunc = defaultFunction(taskFunc);
 
         gulp.task(basename, taskFunc);
     });

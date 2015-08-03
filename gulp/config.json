@@ -6,11 +6,11 @@
       "base":"/config",
       "files":[
         "build.json"
-      ],
-      "tasks":{
-        "dir":"/tasks",
-        "default": ["scripts"]
-      }
+      ]
+    },
+    "tasks":{
+      "base":"/config/tasks",
+      "default": ["scripts"]
     }
   }
 }

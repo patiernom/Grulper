@@ -21,8 +21,8 @@ var fs = require('fs'),
                 projectConfig[0] = current.rootDirectory;
                 projectConfig[1] = current.configuration.base;
                 projectConfig[2] = current.configuration.files;
-                projectConfig[3] = projectConfig[0] + projectConfig[1] + current.configuration.tasks.dir;
-                projectConfig[4] = current.configuration.tasks.default;
+                projectConfig[3] = current.tasks.base;
+                projectConfig[4] = current.tasks.default;
             }
         }
 

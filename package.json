@@ -1,5 +1,5 @@
 {
-  "name": "gulper",
+  "name": "grulper",
   "version": "1.0.0",
   "description": "A simple gulp boilerplate for modularizing tasks",
   "main": "index.js",
