@@ -1,6 +1,6 @@
 {
   "default":{
-    "rootDirectory": "./src",
+    "rootDirectory": "./example",
     "outputDirectory": "/dist",
     "configuration": {
       "base":"/config",

@@ -1,0 +1,29 @@
+{
+  "name": "Grulper",
+  "version": "1.0.0",
+  "homepage": "https://github.com/patiernom/Grulper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patiernom/Grulper.git"
+  },
+  "authors": [
+    "Marco Patierno <marco_patierno@msn.com>"
+  ],
+  "description": "A simple gulp boilerplate for modularizing tasks",
+  "main": [
+    "gulpfile.js",
+    "gulp/config.json"
+  ],
+  "keywords": [
+    "gulp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "dist",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
