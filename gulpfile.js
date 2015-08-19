@@ -1,3 +1,13 @@
+/**
+ * Grulper
+ * This is a project for build javascript, css, image and others assets files
+ * version: 1.0.0
+ *
+ * Homepage: https://github.com/patiernom/Grulper
+ * Author: Marco Patierno - https://github.com/patiernom / https://twitter.com/MarcoPatierno
+ * License: MIT
+ */
+
 'use strict';
 
 var gulp     = require('gulp');
