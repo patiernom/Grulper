@@ -8,7 +8,7 @@ A simple gulp boilerplate for modularizing tasks
 
 You can simple do it by bower registry:
 ```bash
-bower grulper
+bower install grulper
 ```
 
 
