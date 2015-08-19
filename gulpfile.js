@@ -2,13 +2,12 @@
 
 var gulp     = require('gulp');
 var plugins  = require('gulp-load-plugins')();
-var settings = require('./gulp/loadSettings')('gulp/config.json');
-var helpers  = require('./gulp/helpers')(settings);
+var helpers = require('grulper-load-projects')('gulp/config.json');
 var tasks    = require('grulper-load-tasks');
 var options = {
-    dirname: settings.projectDirectory + settings.projectTasks
+    dirname: helpers.projectSetting.projectDirectory + helpers.projectSetting.projectTasks
 };
 
 gulp = tasks(gulp, options, plugins, helpers);
 
-gulp.task('default', ['scripts']);
+gulp.task('default', helpers.projectSetting.projectTasksDefault);
